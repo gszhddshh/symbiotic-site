@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Symbiotic, a permissionless restaking protocol for decentralized networks, with interactive quizzes and community links.">
+    <meta name="keywords" content="Symbiotic, blockchain, restaking, shared security, decentralized, quiz">
+    <meta property="og:title" content="Symbiotic Hub">
+    <meta property="og:description" content="Learn about Symbiotic’s restaking and shared security with interactive quizzes.">
+    <meta property="og:image" content="assets/symbiotic-logo.png">
+    <title>Symbiotic Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div id="particles-js"></div>
+    <div class="loader" id="loader">
+        <img src="assets/symbiotic-logo.png" alt="Loading Symbiotic" class="loader-logo">
+    </div>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/symbiotic-logo.png" alt="Symbiotic Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'; console.error('Logo failed to load: assets/symbiotic-logo.png');">
+                <span class="logo-text" style="display: none;">Symbiotic Hub</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#learn" class="nav-link">Learn</a></li>
+                    <li><a href="#use-cases" class="nav-link">Use Cases</a></li>
+                    <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                    <li><a href="#stats" class="nav-link">Stats</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#quiz" class="nav-link">Quiz</a></li>
+                    <li><a href="#community" class="nav-link">Community</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1 class="animated-title">Discover Symbiotic</h1>
+            <p class="subtitle">A permissionless restaking protocol empowering decentralized networks.</p>
+            <a href="#learn" class="cta-button">Start Exploring</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Symbiotic</h2>
+            <div class="about-content">
+                <p>Symbiotic is a permissionless restaking protocol designed to enhance blockchain security and efficiency. By enabling shared security, it allows staked assets like ETH to secure multiple protocols simultaneously.</p>
+                <p>With a modular architecture, Symbiotic empowers developers to create secure, scalable, and decentralized ecosystems tailored to their needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="learn">
+        <div class="container">
+            <h2>Learn About Restaking</h2>
+            <div class="learn-content">
+                <p>Symbiotic introduces restaking, a mechanism that reuses staked assets to secure multiple protocols, reducing costs and enhancing interoperability. Its shared security model optimizes capital efficiency for decentralized networks.</p>
+                <div class="restaking-diagram">
+                    <svg viewBox="0 0 300 150" class="restaking-svg">
+                        <circle cx="50" cy="75" r="20" fill="#00FF88" opacity="0.3"/>
+                        <circle cx="150" cy="75" r="20" fill="#00FF88" opacity="0.3"/>
+                        <circle cx="250" cy="75" r="20" fill="#00FF88" opacity="0.3"/>
+                        <line x1="70" y1="75" x2="130" y2="75" stroke="#00FF88" stroke-width="2"/>
+                        <line x1="170" y1="75" x2="230" y2="75" stroke="#00FF88" stroke-width="2"/>
+                        <text x="50" y="100" fill="#fff" font-size="12" text-anchor="middle">Asset</text>
+                        <text x="150" y="100" fill="#fff" font-size="12" text-anchor="middle">Protocol A</text>
+                        <text x="250" y="100" fill="#fff" font-size="12" text-anchor="middle">Protocol B</text>
+                        <text x="150" y="30" fill="#00FF88" font-size="14" text-anchor="middle">Restaking</text>
+                    </svg>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Shared Security</h3>
+                        <p>Pools resources to reduce staking costs across protocols.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Restaking</h3>
+                        <p>Reuses staked assets for multiple networks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Modular Architecture</h3>
+                        <p>Customizable rewards and slashing mechanisms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Permissionless Design</h3>
+                        <p>Open for developers to integrate and innovate.</p>
+                    </div>
+                </div>
+                <p>Learn more at <a href="https://symbiotic.fi/" target="_blank" class="symbiotic-link">Symbiotic.fi</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases">
+        <div class="container">
+            <h2>Use Cases</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>DeFi Yield Aggregators</h3>
+                    <p>Optimizes staking costs and maximizes yields via restaking.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Cross-Chain Bridges</h3>
+                    <p>Secures asset transfers across blockchains.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Data Oracles</h3>
+                    <p>Provides secure data feeds for smart contracts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <div class="roadmap-content">
+                <div class="roadmap-item">
+                    <h3>Phase 1: Launch</h3>
+                    <p>Core restaking protocol with shared security features.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>Phase 2: Integrations</h3>
+                    <p>Partnerships with DeFi, bridges, and oracles.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>Phase 3: Expansion</h3>
+                    <p>Support for new blockchains and advanced restaking.</p>
+                </div>
+                <!-- Placeholder: Update with official Symbiotic milestones -->
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="container">
+            <h2>Stats</h2>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <h3>Total Value Locked</h3>
+                    <p class="stat-number" data-target="1000000">0</p>
+                    <p>USD (Placeholder - update with actual TVL)</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Integrated Protocols</h3>
+                    <p class="stat-number" data-target="10">0</p>
+                    <p>Networks (Placeholder - update with actual count)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <h3>What is restaking?</h3>
+                    <p>Restaking allows staked assets to secure multiple protocols, improving efficiency.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does Symbiotic ensure security?</h3>
+                    <p>Through shared security and modular architecture for customizable protection.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are Symbiotic’s key applications?</h3>
+                    <p>DeFi yield aggregators, cross-chain bridges, and data oracles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <div class="container">
+            <h2>Test Your Knowledge</h2>
+            <div id="quiz-container">
+                <div id="progress"><div class="progress-bar"></div>Question <span id="current-question">1</span> of <span id="total-questions"></span> | Time: <span id="timer">30s</span></div>
+                <div id="question"></div>
+                <div id="options"></div>
+                <button id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+                <div id="result"></div>
+            </div>
+            <canvas id="score-canvas" width="100" height="100"></canvas>
+        </div>
+    </section>
+
+    <section id="community">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <div class="community-content">
+                <p>Stay updated and connect with Symbiotic’s community.</p>
+                <div class="community-links">
+                    <a href="https://twitter.com/symbioticfi" target="_blank" class="community-button">Join X</a>
+                    <a href="https://discord.com/invite/symbiotic" target="_blank" class="community-button">Join Discord</a>
+                    <a href="https://t.me/symbioticfi" target="_blank" class="community-button">Join Telegram</a>
+                    <!-- Placeholder: Update Discord and Telegram links with official URLs -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Learn more at <a href="https://symbiotic.fi/" target="_blank" class="symbiotic-link">Symbiotic.fi</a></p>
+            <p>© 2025 Symbiotic Hub</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
